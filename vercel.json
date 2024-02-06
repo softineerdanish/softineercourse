@@ -3,5 +3,4 @@
   "name": "softineercourse",
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/server.js" }],
-  "Access-Control-Allow-Origin":"*"
 }
