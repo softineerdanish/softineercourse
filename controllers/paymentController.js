@@ -93,7 +93,7 @@ export const cancelSubscription = catchAsyncError(async(req,res,next)=>{
   const refundTime = process.env.REFUND_DAYS * 24 * 60 * 60 * 1000;
 
 if(refundTime > gap){
-  await instance.payments.refunds(payment.razorpay_payment_id);
+  await instance.payments.refund(payment.razorpay_payment_id);
   refund = true;
 }
 
